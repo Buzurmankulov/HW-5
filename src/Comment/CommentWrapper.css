@@ -1,0 +1,10 @@
+.wrapper {
+  text-align: center;
+  border: 1px solid;
+  border-radius: 15px;
+  width: 100px;
+  font-style: italic;
+  font-weight: 500;
+  font-size: x-large;
+  border: none;
+}
