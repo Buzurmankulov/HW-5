@@ -1,19 +1,24 @@
 import "./App.css";
-import Comment from "./Comment/Comment";
-
-const comment = {
-  date: new Date(),
-  text: "I hope you enjoy learning React",
-  author: {
-    name: "Hello Kitty",
-    avatarUrl:
-      "https://www.humanesociety.org/sites/default/files/styles/1240x698/public/2020-07/kitten-510651.jpg?h=f54c7448&itok=ZhplzyJ9",
-  },
-};
+import Card from "./components/card/Card";
+import CardLayout from "./components/card_layout/CardLayout";
+import Title from "./components/title/Title";
+import users from "./utls/Data";
 function App() {
   return (
     <div className="App">
-      <Comment data={comment} />
+      <Title />
+      <CardLayout>
+        {users.map((item) => (
+          <Card
+            id={item.id}
+            username={item.username}
+            bgcolor={item.wallpaper}
+            userInfo={item.userInfo}
+            profilePic={item.profilePic}
+            social={item.social}
+          ></Card>
+        ))}
+      </CardLayout>
     </div>
   );
 }
